@@ -1,0 +1,165 @@
+@CHARSET "UTF-8";
+/* 21july 04 */
+
+/* personal profile popup */
+
+td.greyformhead {
+background-color: #666699;
+}
+
+td.greyformhead h2, td.greyformhead h3 {
+color: #FFFFFF;
+margin: 0px 0px 0px 0px;
+padding: 0px 0px 0px 0px;
+}
+
+td.greyformlabel {
+background-color: #CCCCCC;
+}
+
+td.greyformplain, td.greyformplainleft {
+background-color: #CCCCCC;
+}
+
+td.greyformwhite {
+background-color: #FFFFFF;
+}
+
+td.greyformlabel a, td.greyformplain a, td.greyformplainleft a, div.greydatadiv td a, div.threemqform td a {
+color: #003366;
+}
+
+/* end personal profile */
+
+/* occupation list & suitcase popups */
+
+td.popinput {
+padding-top: 8px;
+}
+
+td.popimg {
+padding-top: 12px;
+padding-left: 4px;
+}
+
+table.greydata {
+background-color: White;
+} 
+
+table.greydata td.title 
+{
+border-bottom: 1px solid white;
+background-color: #3399cc;
+color: #ffffff;
+font-weight: bold;
+}
+
+div.greydatadiv table.greydata td.title a {
+color: #ffffff;
+text-decoration: none;
+}
+
+table.greydata th {
+border-bottom: 1px solid white;
+font-weight: bold;
+background-color: #cccccc;
+color: #000000;
+padding: 4px 4px;
+text-align: left;
+}
+
+
+div.greydatadiv table.greydata th a {
+color: #000000;
+text-decoration: none;
+}
+
+div.greydatadiv table.greydata th a:hover {
+text-decoration: underline;
+}
+
+table.greydata td {
+padding: 6px 4px;
+vertical-align:top;
+}
+
+table.greydata td.title a 
+{
+text-decoration: none !important;
+color:White !important;
+
+
+}
+
+td.intranet {
+color: #666666;
+}
+
+div.greydatadiv table.greydata th.intranet a {
+color: #000000;
+text-decoration: none;
+}
+
+div.greydatadiv table.greydata th.intranet a:hover {
+text-decoration: underline;
+}
+
+/* end occupation list & suitcase */
+
+/* 3MQ new styles */
+
+div.progressindicator {
+border-bottom: 1px dotted #CCCCCC;
+padding: 4px 12px 4px 8px;
+color: #333;
+}
+
+td.progressbar {
+background-color: #CCC;
+text-align: left;
+}
+
+div.threemqtext p, div.threemqform p {
+margin: 8px 0px;
+}
+
+/* end 3MQ new styles */
+
+
+/* OfficeAndFees Results page styles */
+
+div.feedatadiv table.feedata th a {
+color: #ffffff;
+}
+
+div.feedatadiv table.feedata td.feetitle{
+color: #ffffff;
+background-color: #3399cc;
+padding:4px 0px 4px 20px;
+font-size: small;
+font-weight: bold;
+}
+
+table.feedata th, table.feedata td  {
+voice-family: "\"}\"";
+voice-family: inherit;
+font-size: small;
+padding-left: 10px;
+}
+
+table.feedata th.left {
+text-align: left;
+}
+
+table.feedata  {
+margin-top: 8px;
+
+}
+table.feedata  {
+background-color: #e1e1e1;
+}
+div.feedatadiv td.sectiondivider {
+border-bottom: 1px solid white;
+} 
+
+/* End OfficeAndFees Results page styles */

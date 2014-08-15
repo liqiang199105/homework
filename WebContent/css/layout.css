@@ -1,0 +1,55 @@
+
+body { font-family:Verdana; font-size:14px; margin:0;}
+
+#container {margin:0 auto; width:100%;}
+#headContent { height:100px; background:#fff; margin-bottom:5px;}
+#logo{ float:left;width:auto;height:100px;}
+#searchbar { float:left; width:350px; height:100px;margin-left:600px;}
+#menu { height:45px; margin-bottom:5px;}
+#mainContent { margin-bottom:5px;}
+#sidebar { float:left; width:200px; }
+#sidebar2 { float:right; width:300px;}
+#content { margin:0 305px 0 205px !important; height:auto !important; width:auto;}
+#footer { padding:10px 0;height:auto !important ;filter:progid:DXImageTransform.microsoft.gradient(gradienttype=0,startColorStr=#cccccc,endColorStr=white);}
+.clearfloat { clear:both; height:0; font-size: 1px; line-height: 0px;}
+#newleft{float:left;width:49%;border:#dcdddd 1px solid; background-image: url("../img/n_flash_bg.png");
+	background-repeat:repeat-x;}
+#newright{float:right;width:49%;border:#dcdddd 1px solid;background-image: url("../img/n_flash_bg.png");
+	background-repeat:repeat-x; }
+/*information*/
+.information{
+	padding-top:5px;
+	height:300px;
+	width:100%;	
+	background-image: url("../img/n_flash_bg.png");
+	background-repeat:repeat-x; 
+}
+.introTitle{
+	margin-left:13px;
+	color: #330000;
+	font-weight: bold;
+	font-size: 17px;
+}
+.topblank{height:20px;width:100%;}
+
+/*search*/
+#search_form{float: left; display: inline; width: 485px;
+padding: 30px 20px 0 20px;}
+#search_form input{height: 37px; float: left;
+display: block; border: 0; width: 430px;
+padding: 5px 30px 3px 3px; 
+background: url("../img/search-bg-right.png") no-repeat top right;
+font: 23px bold "Myriad Pro", Myriad, Arial, Verdana, sans serif;
+ font-style: italic}
+#search_form span.left-cap{display: block; float: left;
+width: 18px; height: 37px;
+background: url("../img/search-bg-left.png") no-repeat top right}
+#search_form #indicator{
+position: absolute; top: 9px; right: 5px}
+
+/*bottom*/
+.bottom{ color:#888889; /*width:1003px;*/ margin:0px auto;background:#cccccc;height:75px;font-family:Microsoft YaHei; }
+.bottom dl{ line-height:20px;padding-top:10px;_padding-top:0px;color:#888889;font-family:Microsoft YaHei;font-size:12px;text-align:center;}
+
+/*logout*/
+#logout{font-family:Microsoft YaHei;color:#410fce;float:left;}

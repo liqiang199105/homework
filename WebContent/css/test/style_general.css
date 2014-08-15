@@ -1,0 +1,351 @@
+@CHARSET "UTF-8";
+/* 21july 04 */
+
+/* ****************************** */
+/* PAGE LAYOUT - top blue banner */
+
+td.topbanner {
+background-color: #0099CC;
+}
+
+td.fullWidth {
+	width: 100%;
+}
+
+/* ************************************************************** */
+/* PAGE LAYOUT - extra row of links in blue header on nzlife etc */
+
+td.lifenav {
+background-color: #66ccff;
+padding: 2px 16px 2px 0px;
+text-align: right;
+}
+
+td.lifenav img {
+display: inline;
+}
+
+td.lifenav a {
+font-weight: bold;
+color: black;
+text-decoration: none;
+}
+
+td.lifenav a:hover {
+color: black;
+text-decoration: underline;
+}
+
+td.lifenav a.current {
+color: white;
+}
+
+td.lifenav a.current:hover {
+color: white;
+text-decoration: underline;
+}
+
+/* ********************** */
+/* PAGE LAYOUT - leftnav */
+
+.leftnavlabel4 {
+font-size: small;
+color: #003366;
+font-weight: bold;
+padding: 2px 0px 0px 4px;
+}
+
+.leftnavlabel5 {
+font-size: small;
+color: #003366;
+font-weight: bold;
+padding: 2px 0px 0px 4px;
+}
+
+.leftnavlabel6 {
+font-size: small;
+color: #003366;
+font-weight: bold;
+padding: 2px 0px 0px 4px;
+}
+
+.leftnavlabel7 {
+font-size: small;
+color: #003366;
+font-weight: bold;
+padding: 2px 0px 0px 4px;
+}
+
+.leftnavlabel4 a, .leftnavlabel5 a, .leftnavlabel6 a, .leftnavlabel7 a {
+color: #003366;
+}
+
+td.leftnav ul {
+margin: 0px;
+padding-left: 0px;
+list-style-type: disc;
+}
+
+td.leftnav ul.inner {
+margin: 0px;
+padding-left: 4px;
+list-style-type: disc;
+}
+
+td.leftnav ul.innermost {
+margin: 0px;
+padding-left: 8px;
+list-style-type: disc;
+}
+
+td.leftnav li.currentb a, td.leftnav li.currentnb a, td.leftnav li.currentb a:hover, td.leftnav li.currentnb a:hover {
+color: #000000;
+}
+
+td.leftnav li.normalb a, td.leftnav li.normalnb a {
+color: #003366;
+}
+
+td.leftnav li.normalb a:hover, td.leftnav li.normalnb a:hover {
+color: #006699;
+}
+
+td.leftnav ul.innermost li.normalb a, td.leftnav ul.innermost li.normalnb a {
+color: #006699;
+}
+
+
+/* grey data tables */
+
+table.popgrey {
+margin-top: 16px;
+padding: 2px 6px 2px 6px;
+}
+
+table.popgrey th, table.popgrey td.bluebg {
+background-color: #3399CC;
+color: #FFFFFF;
+text-align: left;
+}
+
+table.popgrey th {
+border-bottom: solid 1px #FFFFFF;	
+padding: 4px 6px 4px 6px;	
+font-size: x-small;
+}
+
+table.popgrey td {
+background-color: #CCCCCC;
+border-bottom: solid 1px #FFFFFF;
+padding: 4px 6px 4px 6px;	
+font-size: x-small;
+}
+
+table.popgrey td.bg {
+background-image: url(/images/brand/bg/popups/grey_table_left.gif);
+background-repeat: repeat-y;
+}
+
+table.popgrey td.white {
+background-color: #FFFFFF;
+color: #FFFFFF;
+padding: 0px 0px;
+}
+
+table.popgrey td a {
+color: #003366;
+}
+
+/* end grey data tables */
+
+
+
+/* *************************************** */
+/* * POPUPS POPUPS POPUPS POPUPS POPUPS * */
+/* ************************************* */
+
+
+/* background - slideshow */
+body.popgreybgleft {
+background-image: url(/images/brand/bg/popups/grey_344.gif);
+background-repeat: repeat-y;
+}
+
+/* background - required docs (exemplar) & occupational shortages & region guide (cobranded) */
+body.popgreybgall {
+background-color: #CCCCCC;
+}
+
+td.topbannerpop {
+background-color: #3399cc;
+}
+
+td.topbannerpop h1 {
+color: #ffffff;
+padding-top: 4px;
+}
+
+/* close window link */
+
+td.popright {
+background-color: #003366;
+}
+
+td.popright a {
+color: #ffffff;
+text-decoration: underline;
+}
+
+td.popright a:hover {
+color: #ffffff;
+text-decoration: none;
+}
+
+#genericpopbanner 
+{
+background: #3399CC;
+height: 46px;
+text-align: left;
+}
+
+#genericpopbanner img
+{
+float: right;
+clear: none;
+display: block;
+}
+
+#genericpopbanner h1 
+{
+color: White;
+padding: 12px 0 0 12px;
+margin: 0;
+}
+
+/* extra logo row - region guide (cobranded) */
+td.bborder {
+border-bottom: 1px dotted #CCCCCC;
+}
+
+/* ************ */
+/* left blocks */
+
+/* previous & next blue links */
+
+div.popfloats, div.popfloatsdark {
+padding: 12px 0px;
+}
+
+div.popfloats a, div.popfloatsdark a {
+font-weight: bold;
+text-decoration: underline;
+}
+
+div.popfloats a:hover, div.popfloatsdark a:hover {
+text-decoration: none;
+}
+
+div.popfloatsdark a, div.popfloatsdark a:hover, body.popgreybgleft h2 {
+color: #003366;
+}
+
+/* groups of links under leftnav */
+
+div.related {
+background-color: #FFFFFF;
+padding: 8px 8px 8px 8px;
+}
+
+div.related strong {
+color: #003366;
+}
+
+div.related p {
+margin: 2px 0px;
+}
+
+/* main content area */
+
+div.popcontent {
+padding: 12px;
+}
+
+td.popguidetext {
+border-left: 1px dotted #CCCCCC;
+padding: 0px 16px 4px 8px;
+}
+
+/* selects above maps */
+div.popselect {
+padding: 12px 0px 0px 12px;
+}
+
+/* add space to left of maps */
+div.left70 {
+padding-left: 70px;
+}
+
+
+/* for formshelp, glossary */
+
+div.popcontentformshelp {
+padding: 0px 12px 22px 12px;
+}
+
+div.glosslist p {
+margin: 6px 0px;
+}
+
+div.popcontentformshelp h2 {
+color: #003366;
+}
+
+div.popcontentformshelp h3 {
+color: black;
+}
+
+/* end formshelp, glossary */
+
+/* points indicator */
+
+div.popcontentpoints {
+padding: 12px;
+}
+
+div.popcontentpoints h2 {
+color: #003366;
+}
+
+div.popcontentpoints h3 {
+color: black;
+margin-top: 8px;
+}
+
+/* fix for points h3s on Net4.7 - 7sept 2004 */
+
+div.popcontentpoints td.greyformhead h3 {
+color: #ffffff;
+margin: 0px 0px 0px 0px;
+padding: 0px 0px 0px 0px;
+}
+
+div.popcontentpoints p {
+margin: 6px 0px;
+}
+
+table.points td.greyformhead {
+padding-top: 2px;
+padding-bottom: 2px;
+}
+
+div.listitem {
+display: list-item;
+margin-left: 32px;
+}
+
+
+/* end points indicator */
+
+
+
+

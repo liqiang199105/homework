@@ -1,0 +1,7 @@
+@CHARSET "UTF-8";
+/*bottom*/
+.bottom{ color:#888889; /*width:1003px;*/ margin:0px auto;height:75px; }
+.bottom dl{ float:left; line-height:20px;padding-top:10px;_padding-top:0px;color:#888889;}
+.bottom dt{ float:right;padding-top:10px;_padding-top:0px;color:#888889;}
+.bottom select{ border:1px solid #d5d5d5;  width:140px; height:22px; line-height:20px; text-align:left; color:#838383}
+*html .bottom select{ border:1px solid #d5d5d5; width:140px; height:22px;text-align:left; color:#838383}
