@@ -8,8 +8,7 @@
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd">
 
 	<!-- Spring管理Struts2的Action -->
-	<bean name="login" class="com.jialin.action.LoginAction" scope="prototype"></bean>
-	<bean name="updateLogo" class="com.jialin.action.admin.UpdateLogoAction" scope="prototype"></bean>
+	<bean name="login" class="com.litb.action.LoginAction" scope="prototype"></bean>
 	
 	
 	<!-- Spring管理Struts2的Interceptor -->

@@ -2,7 +2,7 @@ package com.litb.service;
 
 import java.util.List;
 
-import com.litb.entity.User;
+import com.litb.model.User;
 
 public interface IUserManager {
 

@@ -4,8 +4,7 @@ import java.util.List;
 
 import org.junit.Test;
 
-import com.litb.entity.User;
-import com.litb.service.IUserManager;
+import com.litb.model.User;
 import com.litb.service.impl.UserManagerImp;
 
 public class UserTest {

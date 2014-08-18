@@ -1,6 +1,6 @@
 package com.litb.service.impl;
 
-import com.litb.entity.User;
+import com.litb.model.User;
 import com.litb.service.IAuthentication;
 import com.litb.service.IUserManager;
 

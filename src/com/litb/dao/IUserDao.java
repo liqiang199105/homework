@@ -1,6 +1,6 @@
 package com.litb.dao;
 
-import com.litb.entity.User;
+import com.litb.model.User;
 
 
 public interface IUserDao {

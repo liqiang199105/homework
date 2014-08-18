@@ -24,13 +24,11 @@ public class CharsetEncodingFilter implements Filter {
 	public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse,
 			FilterChain filterChain) throws IOException, ServletException {
 		
-		//�����ַ�
 		servletRequest.setCharacterEncoding(encoding);
 		filterChain.doFilter(servletRequest, servletResponse);
 	}
 
 	public void init(FilterConfig filterConfig) throws ServletException {
-		//ȡ�ó�ʼ������
 		this.encoding = filterConfig.getInitParameter("encoding");
 	}
 }

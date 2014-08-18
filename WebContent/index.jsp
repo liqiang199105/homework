@@ -11,26 +11,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
   	<base href="<％=basePath％>"></base>
-    <title>探索移民</title>
+    <title>欢迎来到商品展示平台</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <!--头部start-->
 <body>
-<div id=header style="height:200px;">
-<jsp:include page="${basePath}/client/client_top.jsp"></jsp:include> 
-</div>
-<div class="news_wap">
-<div class="about_bg">
-  <div class="news_content" id="content01">
-  
-      <jsp:include page="${basePath}/client/client_index.jsp"></jsp:include>
+  <h1>index.jsp</h1> 
+  <a href="http://localhost/wordpress/">wordpress</a>
 
-
-</div>
-</div>
-</div>
-
-<jsp:include page="${basePath}/admin/footer.jsp"></jsp:include> 
 </body>
 </html>
 

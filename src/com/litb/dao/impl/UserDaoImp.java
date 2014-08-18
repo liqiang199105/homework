@@ -6,7 +6,7 @@ import org.hibernate.cfg.AnnotationConfiguration;
 import org.hibernate.cfg.Configuration;
 
 import com.litb.dao.IUserDao;
-import com.litb.entity.User;
+import com.litb.model.User;
 
 public class UserDaoImp implements IUserDao {
 

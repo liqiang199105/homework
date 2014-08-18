@@ -9,7 +9,7 @@ import org.hibernate.cfg.Configuration;
 
 import com.litb.dao.IUserDao;
 import com.litb.dao.impl.UserDaoImp;
-import com.litb.entity.User;
+import com.litb.model.User;
 import com.litb.service.IUserManager;
 
 public class UserManagerImp implements IUserManager {
