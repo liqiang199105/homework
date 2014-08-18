@@ -10,8 +10,7 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 
 /**
- * ͳһ�����ַ�
- * @author Administrator
+ * @author LiQiang
  *
  */
 public class CharsetEncodingFilter implements Filter {

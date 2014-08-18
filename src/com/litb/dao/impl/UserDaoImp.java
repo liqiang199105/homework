@@ -34,12 +34,15 @@ public class UserDaoImp implements UserDao {
 		sessionFactory.close();
 		return result;
 	}
+	
+	
 	@Override
 	public void modifyUser(User user) {
 		Session session = getSession();
 		session.beginTransaction();
 		session.update(user);
 		session.getTransaction().commit();
+		sessionFactory.close();
 	}
 
 	@Override
@@ -48,11 +51,23 @@ public class UserDaoImp implements UserDao {
 		session.beginTransaction();
 		session.save(user);
 		session.getTransaction().commit();
+		sessionFactory.close();
 	}
 
 	@Override
-	public void deleteTeacher(User user) {
+	public void deleteUser(User user) {
+		Session session = getSession();
+		session.beginTransaction();
+		session.delete(user);
+		session.getTransaction().commit();
+		sessionFactory.close();
+	}
+
+
+	@Override
+	public User getUserByUsername(String username) {
 		
+		return null;
 	}
 
 

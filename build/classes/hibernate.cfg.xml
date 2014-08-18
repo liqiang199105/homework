@@ -20,6 +20,9 @@
 
 		<!-- Enable Hibernate's automatic session context management -->
 		<property name="current_session_context_class">thread</property>
+		
+		<property name="initialPoolSize">2</property>
+		<property name="maxPoolSize">10</property>
 
 		<!-- Disable the second-level cache -->
 		<!-- property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property> -->
@@ -31,6 +34,7 @@
 		<property name="hbm2ddl.auto">update</property>
 		<mapping class="com.litb.model.User" />
 		<mapping class="com.litb.model.Category"/>
+		<mapping class="com.litb.model.Product"/>
 
 	</session-factory>
 

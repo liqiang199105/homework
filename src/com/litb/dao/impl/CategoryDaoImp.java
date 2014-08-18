@@ -33,6 +33,20 @@ public class CategoryDaoImp implements CategoryDao{
 		session.getTransaction().commit();
 		sessionFactory.close();
 		return result;
+	}
+
+	@Override
+	public void addCategory(Category category) {
+		
+	}
+
+	@Override
+	public void deleteCategory(Category category) {
+		
+	}
+
+	@Override
+	public void updateCategory(Category category) {
 		
 	}
 

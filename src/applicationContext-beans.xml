@@ -15,6 +15,6 @@
 	<bean name="checkLoginInterceptor" class="com.litb.interceptor.CheckLogin" scope="prototype"></bean>
 	
 	<bean name="userManager" class="com.litb.service.impl.UserManagerImp"></bean>
-	<bean name="authentication" class="com.litb.service.impl.AuthenticationImp"></bean>
+	<bean name="authentication" class="com.litb.service.impl.AuthenticationServiceImp"></bean>
 
 </beans>

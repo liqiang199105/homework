@@ -9,16 +9,19 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
  <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <base href=" <%=basePath%>"></base> 
-    <title>login</title>
+    <title>register</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
   </head>
 <body>
 					<div style="position:relative; width:300px; margin:0 auto;padding-top:270px;">
-					<s:form action="login" method="post">
+					<s:form action="register" method="post">
 					<s:textfield name="username" label="username"></s:textfield>
-					<s:password name="password" label="password"></s:password>									
-					<s:submit value="login" ></s:submit>
+					<s:password name="password" label="password"></s:password>	
+					<s:password name="confirmPassword" label="confirm password"></s:password>
+					<s:textfield name="email" label="email"></s:textfield>	
+					<s:textfield name="telephone" label="telephone"></s:textfield>								
+					<s:submit value="register" ></s:submit>
 				     </s:form>
 				   </div>
 

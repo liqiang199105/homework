@@ -2,15 +2,11 @@ package com.litb.service.impl;
 
 import java.util.List;
 
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.AnnotationConfiguration;
-import org.hibernate.cfg.Configuration;
-
 import com.litb.dao.UserDao;
 import com.litb.dao.impl.UserDaoImp;
 import com.litb.model.User;
 import com.litb.service.UserManager;
+import com.opensymphony.xwork2.ActionContext;
 
 public class UserManagerImp implements UserManager {
 
@@ -27,19 +23,23 @@ public class UserManagerImp implements UserManager {
 
 	@Override
 	public List<User> getUsers() {
-		List<User> result = userDao.getUsers();
-		return result;
+		return userDao.getUsers();
 	}
 
 	@Override
 	public User getUserByUsername(String username) {
-		for (User user : getUsers()) {
-			if (username.equals(user.getUsername())) {
-				return user;
-			}
-			
-		}
-		return null;
+		return userDao.getUserByUsername(username);
+	}
+
+	@Override
+	public void deleteUser(User user) {
+		userDao.deleteUser(user);
+	}
+
+	@Override
+	public User getCurrentUser() {
+		User currentUser = getUserByUsername((String) ActionContext.getContext().getSession().get("username"));
+		return currentUser;
 	}
 
 }
