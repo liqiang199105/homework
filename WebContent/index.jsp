@@ -18,6 +18,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <body>
   <h1>index.jsp</h1> 
   <a href="http://localhost/wordpress/">wordpress</a>
+  <a href="login.jsp">login</a>
 
 </body>
 </html>

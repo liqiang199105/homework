@@ -9,10 +9,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
  <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <base href=" <%=basePath%>"></base> 
-    <title>探索移民</title>
+    <title>homework</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-   <!-- 
-//--><!]]></script><style type="text/css">
 
   </head>
 <body>
