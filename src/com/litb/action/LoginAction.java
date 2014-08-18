@@ -2,13 +2,16 @@ package com.litb.action;
 
 import java.util.Map;
 
-import com.litb.service.IAuthentication;
-import com.litb.service.impl.AuthenticationImp;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.litb.service.AuthenticationService;
+import com.litb.service.impl.AuthenticationServiceImp;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class LoginAction extends ActionSupport {
-	private IAuthentication authentication = new AuthenticationImp();
+	@Autowired
+	private AuthenticationService authentication;
 	private String username;
 	private String password;
 	

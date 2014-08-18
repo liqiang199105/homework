@@ -14,5 +14,7 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/Administrator/.m2/repository/com/google"/>
+	<classpathentry kind="lib" path="C:/Users/Administrator/.m2/repository/com/google/guava/guava/16.0/guava-16.0.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

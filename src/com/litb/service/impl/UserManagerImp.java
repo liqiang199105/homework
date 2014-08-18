@@ -7,14 +7,14 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;
 import org.hibernate.cfg.Configuration;
 
-import com.litb.dao.IUserDao;
+import com.litb.dao.UserDao;
 import com.litb.dao.impl.UserDaoImp;
 import com.litb.model.User;
-import com.litb.service.IUserManager;
+import com.litb.service.UserManager;
 
-public class UserManagerImp implements IUserManager {
+public class UserManagerImp implements UserManager {
 
-	private IUserDao userDao = new UserDaoImp();
+	private UserDao userDao = new UserDaoImp();
 	@Override
 	public void modifyUser(User user) {
 		userDao.modifyUser(user);
@@ -27,13 +27,7 @@ public class UserManagerImp implements IUserManager {
 
 	@Override
 	public List<User> getUsers() {
-		Configuration cfg = new AnnotationConfiguration();
-		SessionFactory sf = cfg.configure().buildSessionFactory();
-		Session session = sf.getCurrentSession();
-		session.beginTransaction();
-		List<User> result = session.createQuery("from User").list();
-		session.getTransaction().commit();
-		sf.close();
+		List<User> result = userDao.getUsers();
 		return result;
 	}
 

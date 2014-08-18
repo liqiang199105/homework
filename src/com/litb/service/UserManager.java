@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.litb.model.User;
 
-public interface IUserManager {
+public interface UserManager {
 
 	public void modifyUser(User user);
 	public void addUser(User user);

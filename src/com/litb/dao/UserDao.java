@@ -1,9 +1,12 @@
 package com.litb.dao;
 
+import java.util.List;
+
 import com.litb.model.User;
 
 
-public interface IUserDao {
+public interface UserDao {
+	public List<User> getUsers();
 	public void modifyUser(User user);
 	public void addUser(User user);
 	public void deleteTeacher(User user);

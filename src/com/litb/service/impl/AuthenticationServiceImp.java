@@ -1,12 +1,14 @@
 package com.litb.service.impl;
 
-import com.litb.model.User;
-import com.litb.service.IAuthentication;
-import com.litb.service.IUserManager;
+import org.springframework.beans.factory.annotation.Autowired;
 
-public class AuthenticationImp implements IAuthentication{
-//	private ITeacherManager teacherManager = new TeacherManagerImp();
-	private IUserManager userManager = new UserManagerImp();
+import com.litb.model.User;
+import com.litb.service.AuthenticationService;
+import com.litb.service.UserManager;
+
+public class AuthenticationServiceImp implements AuthenticationService{
+	@Autowired
+	private UserManager userManager;
 	@Override
 	public boolean authenticate(String username, String password) {
 			User user = userManager.getUserByUsername(username);

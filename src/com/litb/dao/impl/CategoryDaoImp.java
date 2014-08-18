@@ -7,10 +7,10 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;
 import org.hibernate.cfg.Configuration;
 
-import com.litb.dao.UserDao;
-import com.litb.model.User;
+import com.litb.dao.CategoryDao;
+import com.litb.model.Category;
 
-public class UserDaoImp implements UserDao {
+public class CategoryDaoImp implements CategoryDao{
 
 	private SessionFactory sessionFactory;
 
@@ -18,42 +18,22 @@ public class UserDaoImp implements UserDao {
 		
 		this.sessionFactory = sessionFactory;
 	}
-	
 
 	public Session getSession() {
 		Configuration cfg = new AnnotationConfiguration();
 	    sessionFactory = cfg.configure().buildSessionFactory();
 		return sessionFactory.getCurrentSession();
 	}
-	
-	public List<User> getUsers() {
+	@Override
+	public List<Category> getCategories() {
 		Session session = getSession();
 		session.beginTransaction();
-		List<User> result = session.createQuery("from User").list();
+		List<Category> result = session.createQuery("from Category").list();
+		System.out.println(result.size());
 		session.getTransaction().commit();
 		sessionFactory.close();
 		return result;
-	}
-	@Override
-	public void modifyUser(User user) {
-		Session session = getSession();
-		session.beginTransaction();
-		session.update(user);
-		session.getTransaction().commit();
-	}
-
-	@Override
-	public void addUser(User user) {
-		Session session = getSession();
-		session.beginTransaction();
-		session.save(user);
-		session.getTransaction().commit();
-	}
-
-	@Override
-	public void deleteTeacher(User user) {
 		
 	}
-
 
 }

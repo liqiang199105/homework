@@ -1,0 +1,32 @@
+INSERT INTO category (c_id, c_name, c_parent_id) VALUES('1001', 'Weddings & Events',NULL);
+INSERT INTO category (c_id, c_name, c_parent_id) VALUES('1002', 'Home & Garden',NULL);
+INSERT INTO category (c_id, c_name, c_parent_id) VALUES('1003', 'Electronics',NULL);
+INSERT INTO category (c_id, c_name, c_parent_id) VALUES('1004', 'Health & Beauty',NULL);
+INSERT INTO category (c_id, c_name, c_parent_id) VALUES('1005', 'Sports',NULL);
+
+INSERT INTO category (c_id, c_name, c_parent_id) VALUES('2001', 'Wedding Dresses','1001');
+INSERT INTO category (c_id, c_name, c_parent_id) VALUES('2002', 'Wedding Party Dresses','1001');
+INSERT INTO category (c_id, c_name, c_parent_id) VALUES('2003', 'Special Occasion Dresses','1001');
+INSERT INTO category (c_id, c_name, c_parent_id) VALUES('2004', 'Accessories','1001');
+
+INSERT INTO category (c_id, c_name, c_parent_id) VALUES('2005', 'Lighting','1002');
+INSERT INTO category (c_id, c_name, c_parent_id) VALUES('2006', 'Wall Art','1002');
+INSERT INTO category (c_id, c_name, c_parent_id) VALUES('2007', 'Bedding','1002');
+INSERT INTO category (c_id, c_name, c_parent_id) VALUES('2008', 'Curtains','1002');
+
+INSERT INTO category (c_id, c_name, c_parent_id) VALUES('2009', 'Car DVD Players','1003');
+INSERT INTO category (c_id, c_name, c_parent_id) VALUES('2010', 'Security Systems','1003');
+INSERT INTO category (c_id, c_name, c_parent_id) VALUES('2011', 'Cameras, Camcorders','1003');
+INSERT INTO category (c_id, c_name, c_parent_id) VALUES('2012', 'Headphones','1003');
+
+INSERT INTO category (c_id, c_name, c_parent_id) VALUES('2013', 'Tattoos, Body Art','1004');
+INSERT INTO category (c_id, c_name, c_parent_id) VALUES('2014', 'Wigs','1004');
+INSERT INTO category (c_id, c_name, c_parent_id) VALUES('2015', 'Makeup Supply','1004');
+INSERT INTO category (c_id, c_name, c_parent_id) VALUES('2016', 'Health Care','1004');
+
+INSERT INTO category (c_id, c_name, c_parent_id) VALUES('2017', 'Cycling','1005');
+INSERT INTO category (c_id, c_name, c_parent_id) VALUES('2018', 'Camping & Hiking','1005');
+INSERT INTO category (c_id, c_name, c_parent_id) VALUES('2019', 'Exercise & Fitness','1005');
+INSERT INTO category (c_id, c_name, c_parent_id) VALUES('2020', 'Snow Sports','1005');
+
+
