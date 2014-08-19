@@ -34,7 +34,27 @@ public class CategoryDaoImp implements CategoryDao{
 		sessionFactory.close();
 		return result;
 	}
+	@Override
+	public List<Category> getPrimaryCategories() {
+		Session session = getSession();
+		session.beginTransaction();
+		List<Category> result = session.createQuery("from Category where parentId < 0").list();
+		System.out.println(result.size());
+		session.getTransaction().commit();
+		sessionFactory.close();
+		return result;
+	}
 
+	@Override
+	public List<Category> getSubCategories(int parentId) {
+		Session session = getSession();
+		session.beginTransaction();
+		List<Category> result = session.createQuery("from Category where parentId=" + parentId).list();
+		System.out.println(result.size());
+		session.getTransaction().commit();
+		sessionFactory.close();
+		return result;
+	}
 	@Override
 	public void addCategory(Category category) {
 		
@@ -49,5 +69,8 @@ public class CategoryDaoImp implements CategoryDao{
 	public void updateCategory(Category category) {
 		
 	}
+
+
+	
 
 }

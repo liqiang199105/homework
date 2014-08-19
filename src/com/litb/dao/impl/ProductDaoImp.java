@@ -9,6 +9,7 @@ import org.hibernate.cfg.Configuration;
 
 import com.litb.dao.ProductDao;
 import com.litb.model.Product;
+import com.litb.model.User;
 
 public class ProductDaoImp implements ProductDao{
 
@@ -32,5 +33,25 @@ public class ProductDaoImp implements ProductDao{
 		Configuration cfg = new AnnotationConfiguration();
 	    sessionFactory = cfg.configure().buildSessionFactory();
 		return sessionFactory.getCurrentSession();
+	}
+
+	@Override
+	public Product getProductById(int pId) {
+		Session session = getSession();
+		session.beginTransaction();
+		Product product = (Product) session.createQuery("from Product where id=" + pId ).list().get(0);
+		session.getTransaction().commit();
+		sessionFactory.close();
+		return product;
+	}
+
+	@Override
+	public List<Product> getProductsByCid(int cid) {
+		Session session = getSession();
+		session.beginTransaction();
+		List<Product> result = session.createQuery("from Product where cid=" + cid).list();
+		session.getTransaction().commit();
+		sessionFactory.close();
+		return result;
 	}
 }

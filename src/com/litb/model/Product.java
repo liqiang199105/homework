@@ -57,5 +57,11 @@ public class Product {
 	public void setCid(int cid) {
 		this.cid = cid;
 	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
 
 }

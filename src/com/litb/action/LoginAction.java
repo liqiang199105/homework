@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import com.litb.model.User;
 import com.litb.service.AuthenticationService;
 import com.litb.service.UserManager;
-import com.litb.service.impl.AuthenticationServiceImp;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 

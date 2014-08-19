@@ -16,5 +16,9 @@
 	
 	<bean name="userManager" class="com.litb.service.impl.UserManagerImp"></bean>
 	<bean name="authentication" class="com.litb.service.impl.AuthenticationServiceImp"></bean>
+	<bean name="productDao" class="com.litb.dao.impl.ProductDaoImp"></bean>
+	<bean name="productService" class="com.litb.service.impl.ProductServiceImp"></bean>
+	<bean name="categoryDao" class="com.litb.dao.impl.CategoryDaoImp"></bean>
+	<bean name="categroyService" class="com.litb.service.impl.CategoryServiceImp"></bean>
 
 </beans>
