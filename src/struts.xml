@@ -26,7 +26,8 @@
         </action>
         <action name="register" class="com.litb.action.LoginAction" method="register">
         	<result name="input">register.jsp</result>
-           	<result name="success" type="redirect">login</result>
+        	<result name="success">login.jsp</result>
+           	<!-- <result name="success" type="redirect">login</result> -->	
         </action>
 
     </package>

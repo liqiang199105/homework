@@ -34,7 +34,16 @@ public class UserDaoImp implements UserDao {
 		sessionFactory.close();
 		return result;
 	}
-	
+
+	@Override
+	public User getUserByUsername(String username) {
+		Session session = getSession();
+		session.beginTransaction();
+		User user = (User) session.createQuery("from User where username='" + username + " '").list().get(0);
+		session.getTransaction().commit();
+		sessionFactory.close();
+		return user;
+	}
 	
 	@Override
 	public void modifyUser(User user) {
@@ -62,13 +71,5 @@ public class UserDaoImp implements UserDao {
 		session.getTransaction().commit();
 		sessionFactory.close();
 	}
-
-
-	@Override
-	public User getUserByUsername(String username) {
-		
-		return null;
-	}
-
 
 }

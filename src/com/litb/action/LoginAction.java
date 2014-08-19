@@ -16,6 +16,7 @@ public class LoginAction extends ActionSupport {
 	private AuthenticationService authentication;
 	@Autowired
 	private UserManager userManager;
+	
 	private String username;
 	private String password;
 	private String confirmPassword;
@@ -41,7 +42,7 @@ public class LoginAction extends ActionSupport {
     
 	public String register(){
 		User user = new User();
-		if(username != null && password == confirmPassword ){
+		if(username != null && password.endsWith(confirmPassword)){
 			user.setUsername(username);
 			user.setEmail(email);
 			user.setPassword(password);
