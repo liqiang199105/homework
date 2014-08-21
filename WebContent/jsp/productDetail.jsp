@@ -37,6 +37,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				    <a href="<%=basePath%>jsp/addToCart.jsp?pid=<s:property value='#request.product.id'/>"/>
 						添加到购物车
 					</a></br>
+					<s:token></s:token>
 				</form>
 		</div>
 	</div>
