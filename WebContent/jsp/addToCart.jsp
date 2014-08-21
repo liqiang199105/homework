@@ -24,13 +24,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	</div>		
 	<div id="wrapper">
 		<div id="content" >
-			<s:action name="getProductsByCid"></s:action>
-			<s:iterator value="#request.productList" id="product">
-				<img src="<s:property value='#product.imgUrl'/>"></br>
-				<a href="<%=basePath%>jsp/productDetail.jsp?pid=<s:property value='#product.id'/>"/>
-					<s:property value='#product.name'/>
-				</a></br>
-			</s:iterator>
+			<s:action name="addTocart"></s:action>
+			<p>商品已成功加入购物车</p>
+			<a href="<%=basePath%>index.jsp">继续购物</a>
+			<a href="<%=basePath%>jsp/cart.jsp">去购物车结算</a>
+			
 		</div>
 	</div>
     

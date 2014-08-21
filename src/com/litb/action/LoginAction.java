@@ -33,7 +33,6 @@ public class LoginAction extends ActionSupport {
 			System.out.println(username + "认证成功");
 			return SUCCESS;
 		}
-		System.out.println("认证失败");
 		username = "";
 		password = "";
 		return INPUT;
@@ -50,6 +49,9 @@ public class LoginAction extends ActionSupport {
 			return SUCCESS;
 		}
 		return INPUT;
+	}
+	public String manager(){
+		return SUCCESS;
 	}
 	public String getUsername() {
 		return username;

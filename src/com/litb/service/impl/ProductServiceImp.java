@@ -2,8 +2,6 @@ package com.litb.service.impl;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
-
 import com.litb.dao.ProductDao;
 import com.litb.dao.impl.ProductDaoImp;
 import com.litb.model.Product;
@@ -20,6 +18,17 @@ public class ProductServiceImp implements ProductService{
 	@Override
 	public List<Product> getProductsByCid(int cid) {
 		return productDao.getProductsByCid(cid);
+	}
+
+	@Override
+	public List<Product> getTop10Products() {
+		return productDao.getTop10Products();
+	}
+
+	@Override
+	public List<Product> getProductsByKeyword(String keyword) {
+		return productDao.getProductsByKeyword(keyword);
+
 	}
 
 }

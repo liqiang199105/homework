@@ -9,7 +9,7 @@
 
 		<!-- Database connection settings -->
 		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-		<property name="connection.url">jdbc:mysql://localhost/homework?useUnicode=true&amp;characterEncoding=utf-8 </property>
+		<property name="connection.url">jdbc:mysql://localhost/homework?useUnicode=true&amp;characterEncoding=utf-8&amp;zeroDateTimeBehavior=convertToNull </property>
 		<property name="connection.username">root</property>
 		<property name="connection.password"></property>
 		<!-- JDBC connection pool (use the built-in) -->
@@ -35,6 +35,7 @@
 		<mapping class="com.litb.model.User" />
 		<mapping class="com.litb.model.Category"/>
 		<mapping class="com.litb.model.Product"/>
+		<mapping class="com.litb.model.Order"/>
 
 	</session-factory>
 

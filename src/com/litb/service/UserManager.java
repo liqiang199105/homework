@@ -2,10 +2,6 @@ package com.litb.service;
 
 import java.util.List;
 
-import org.junit.Test;
-
-import com.litb.dao.CategoryDao;
-import com.litb.dao.impl.CategoryDaoImp;
 import com.litb.model.User;
 
 public interface UserManager {

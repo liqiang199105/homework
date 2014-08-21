@@ -22,8 +22,17 @@
 
         <action name="login" class="com.litb.action.LoginAction">
            <result name="input">login.jsp</result>
-           <result name="success">success.jsp</result>
+           <result name="success">index.jsp</result>
+           <result name="error">register.jsp</result>
         </action>
+        <action name="manager" class="com.litb.action.LoginAction" method="manager">
+           <result name="success">jsp/manager.jsp</result>
+        </action>
+        <action name="logout" class="com.litb.action.LogoutAction">
+           <result name="input">index.jsp</result>
+           <result name="success">index.jsp</result>
+        </action>
+        
         <action name="register" class="com.litb.action.LoginAction" method="register">
         	<result name="input">register.jsp</result>
         	<result name="success">login.jsp</result>
@@ -38,9 +47,25 @@
         	<result name="success">jsp/productsByCid.jsp</result>
         	<result name="error">fail.jsp</result>
         </action>
+        <action name="getTop10Products" class="com.litb.action.product.ProductAction" method="getTop10Products">
+        	<result name="success">index.jsp</result>
+        	<result name="error">fail.jsp</result>
+        </action>
+        <action name="getProductsByKeyword" class="com.litb.action.product.ProductAction" method="getProductsByKeyword">
+        	<result name="success">index.jsp</result>
+        	<result name="error">fail.jsp</result>
+        </action>
+        
         
         <action name="getPrimaryCategories" class="com.litb.action.category.CategoryAction">
         	<result name="success">index.jsp</result>
+        	<result name="error">fail.jsp</result>
+        </action>
+        <!-- 购物车配置 -->
+        
+        <action name="addTocart" class="com.litb.action.CartAction">
+        	<result name="success">jsp/addToCart.jsp</result>
+        	<result name="input">loginl.jsp</result>
         	<result name="error">fail.jsp</result>
         </action>
 

@@ -29,7 +29,6 @@ public class CategoryDaoImp implements CategoryDao{
 		Session session = getSession();
 		session.beginTransaction();
 		List<Category> result = session.createQuery("from Category").list();
-		System.out.println(result.size());
 		session.getTransaction().commit();
 		sessionFactory.close();
 		return result;
@@ -39,7 +38,6 @@ public class CategoryDaoImp implements CategoryDao{
 		Session session = getSession();
 		session.beginTransaction();
 		List<Category> result = session.createQuery("from Category where parentId < 0").list();
-		System.out.println(result.size());
 		session.getTransaction().commit();
 		sessionFactory.close();
 		return result;

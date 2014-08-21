@@ -1,7 +1,6 @@
 package com.litb.service;
 
 import org.junit.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import com.litb.dao.ProductDao;
 import com.litb.dao.impl.ProductDaoImp;
@@ -23,5 +22,14 @@ public class ProductTest {
 		System.out.println("img:" + product.getImgUrl());
 		System.out.println("cid:" + product.getCid());
 		
+	}
+	@Test
+	public void testGetTop10Products(){
+		System.out.println(productService.getTop10Products().size());
+	}
+	@Test
+	public void testGetProductsByKeyword(){
+		String keyword ="Wedd";
+		System.out.println(productService.getProductsByKeyword(keyword).size());
 	}
 }

@@ -38,8 +38,14 @@ public class UserManagerImp implements UserManager {
 
 	@Override
 	public User getCurrentUser() {
-		User currentUser = getUserByUsername((String) ActionContext.getContext().getSession().get("username"));
-		return currentUser;
+		String username = (String) ActionContext.getContext().getSession().get("username");
+		System.out.println("username" + username);
+		if(username!=null){
+			User currentUser = getUserByUsername(username);
+			return currentUser;
+		} else {
+			return null;
+		}
 	}
 
 }

@@ -24,13 +24,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	</div>		
 	<div id="wrapper">
 		<div id="content" >
-			<s:action name="getProductsByCid"></s:action>
-			<s:iterator value="#request.productList" id="product">
-				<img src="<s:property value='#product.imgUrl'/>"></br>
-				<a href="<%=basePath%>jsp/productDetail.jsp?pid=<s:property value='#product.id'/>"/>
-					<s:property value='#product.name'/>
-				</a></br>
-			</s:iterator>
+			<s:iterator value="#session.orders" id="order">
+			
+			</s:iterator>			
 		</div>
 	</div>
     

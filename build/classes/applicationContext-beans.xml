@@ -20,5 +20,7 @@
 	<bean name="productService" class="com.litb.service.impl.ProductServiceImp"></bean>
 	<bean name="categoryDao" class="com.litb.dao.impl.CategoryDaoImp"></bean>
 	<bean name="categroyService" class="com.litb.service.impl.CategoryServiceImp"></bean>
+	<bean name="orderDao" class="com.litb.dao.impl.OrderDaoImp"></bean>
+	<bean name="orderService" class="com.litb.service.impl.OrderServiceImp"></bean>
 
 </beans>

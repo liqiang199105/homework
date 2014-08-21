@@ -18,15 +18,35 @@
 
 </head>
 <body>
+
 	 <div id="nonFooter">
 	 
-	    <div id="header"></div>
+	   <div id="header">
+    	<div id="logo">Product Show</div>
+        <ul id="userOptions">
+        <s:if test="#session.username!=null">
+        	<li id="userInfo">当前用户：<s:property value="#session.username"/></li>&nbsp;&nbsp;&nbsp;&nbsp;
+        	<li id="userInfo"><a href="<%=basePath%>logout">logout</a></li>
+        </s:if>
+        
+        </ul>
+	</div>	
 		<div id="wrapper">
-			 <div id="content">
-				 <p><input type="text" name="keywords" /><input type="submit" value="Search"/></p>
+		   	<div>
+		   		<s:if test="#session.username!=null">
+		   			<a href="<%=basePath%>jsp/cart.jsp">查看购物车</a>
+		   		</s:if>
+		   	</div>
+			<div id="content">
+				<s:action name="getProductsByKeyword"></s:action>
+				<s:form action="getProductsByKeyword" method="post">
+			  		<s:textfield name="keyword"></s:textfield>								
+					<s:submit value="Search" ></s:submit>
+		        </s:form>
 			 </div>
 			 
-			<div id="content">
+			<!-- 输出品类 --> 
+			<div id="content" style="margin-left: 100px">
 			 <s:action name="getPrimaryCategories"></s:action>
 			 <s:iterator value="#request.primaryCategories" id="category">
 			 		<label><s:property value="#category.name"/></label></br>
@@ -39,12 +59,24 @@
 			 			</s:iterator>
 			 		</s:if>
 			 </s:iterator>
+			 
+			</div>
+			<!-- 按条件显示产品 --> 
+			<div style="margin-left: 500px">
+				<s:if test="#request.searchProducts!=null">
+					<s:iterator value="#request.searchProducts" id="product">
+						<img src="<s:property value='#product.imgUrl'/>"></br>
+						<a href="<%=basePath%>jsp/productDetail.jsp?pid=<s:property value='#product.id'/>"123/>
+							<s:property value='#product.name'/>
+						</a></br>
+					</s:iterator>
+				</s:if>
 			</div>
 		</div>
 		
 	 </div>
 	 <div id="footer">
-	  <p>Powered By xxx</p>
+	  <p>Powered By Larkin</p>
 	 </div>
 
 </body>

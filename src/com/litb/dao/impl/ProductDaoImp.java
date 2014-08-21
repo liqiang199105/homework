@@ -9,9 +9,9 @@ import org.hibernate.cfg.Configuration;
 
 import com.litb.dao.ProductDao;
 import com.litb.model.Product;
-import com.litb.model.User;
 
 public class ProductDaoImp implements ProductDao{
+	private SessionFactory sessionFactory;
 
 	@Override
 	public List<Product> getProducts() {
@@ -22,7 +22,6 @@ public class ProductDaoImp implements ProductDao{
 		sessionFactory.close();
 		return result;
 	}
-	private SessionFactory sessionFactory;
 
 	public void setSessionFactory(SessionFactory sessionFactory) {
 		
@@ -50,6 +49,26 @@ public class ProductDaoImp implements ProductDao{
 		Session session = getSession();
 		session.beginTransaction();
 		List<Product> result = session.createQuery("from Product where cid=" + cid).list();
+		session.getTransaction().commit();
+		sessionFactory.close();
+		return result;
+	}
+
+	@Override
+	public List<Product> getTop10Products() {
+		Session session = getSession();
+		session.beginTransaction();
+		List<Product> result = session.createQuery("from Product").setMaxResults(10).list();
+		session.getTransaction().commit();
+		sessionFactory.close();
+		return result;
+	}
+
+	@Override
+	public List<Product> getProductsByKeyword(String keyword) {
+		Session session = getSession();
+		session.beginTransaction();
+		List<Product> result = session.createQuery("from Product where name like \'%" + keyword + "%\'").list();
 		session.getTransaction().commit();
 		sessionFactory.close();
 		return result;
