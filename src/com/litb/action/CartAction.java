@@ -8,8 +8,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.litb.model.Order;
 import com.litb.model.Product;
+import com.litb.service.OrderService;
 import com.litb.service.ProductService;
 import com.litb.service.UserManager;
+import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class CartAction extends ActionSupport {
@@ -22,20 +24,24 @@ public class CartAction extends ActionSupport {
 	private UserManager userManager;
 	@Autowired 
 	private ProductService productService;
+	@Autowired
+	private OrderService orderService;
 	
 
 	@Override
 	public String execute() throws Exception {
 		try {
-			if(userManager.getCurrentUser().getUsername()!=null){
-//				orders = (List<Order>) ServletActionContext.getRequest().getSession().getAttribute("orders");
-				customerId = userManager.getCurrentUser().getId();
+			String username = (String) ServletActionContext.getRequest().getSession().getAttribute("username");
+			System.out.println("qty" + qty);
+			if(username!=null){
+				customerId = userManager.getUserByUsername(username).getId();
 				Product product = productService.getProductById(pid);
 				customerId = userManager.getCurrentUser().getId();
 				System.out.println("qty" + qty);
 				System.out.println("customerId" + customerId);
 				Order order = new Order(product.getPrice(),customerId,pid,qty,new Timestamp(System.currentTimeMillis()));
-				orders.add(order);
+				orderService.addOrder(order);
+				List<Order> orders = orderService.getOrdersByCustomerId(customerId);
 				ServletActionContext.getRequest().getSession().setAttribute("orders", orders);
 				return SUCCESS;
 			} else {
@@ -45,6 +51,18 @@ public class CartAction extends ActionSupport {
 			e.printStackTrace();
 			return ERROR;
 		} 
+	}
+	public String goToCart(){
+		try {
+			int customerId = userManager.getCurrentUser().getId();
+			System.out.println("customerid: " + customerId);
+			List<Order> orders = orderService.getOrdersByCustomerId(customerId);
+			ServletActionContext.getRequest().getSession().setAttribute("orders", orders);
+			return SUCCESS;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return ERROR;
+		}
 	}
 
 

@@ -21,15 +21,18 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	<div id="logo">Product Show</div>
         <ul id="userOptions">
         <li id="userInfo"><a href="http://localhost/wordpress/">联系我们</a></li>
+        <s:if test="#session.username!=null">
+        	<li id="userInfo">当前用户：<s:property value="#session.username"/></li>&nbsp;&nbsp;&nbsp;&nbsp;
+        	<li id="userInfo"><a href="<%=basePath%>logout">logout</a></li>
+        </s:if>
         </ul>
 	</div>		
 	<div id="wrapper">
 		<div id="content" >
 			<s:debug></s:debug>
-				<form action="addTocart">
+				<s:form action="addToCart">
 					<s:action name="getProductDetail"></s:action>
 					<img src="<s:property value='#request.product.imgUrl'/>"></br>
-					
 					<label>name&nbsp;:<s:property value='#request.product.name'/></label></br>
 					<label>price&nbsp;:<s:property value='#request.product.price'/></label></br>
 					<label>detail&nbsp;:<s:property value='#request.product.detail'/></label></br>
@@ -37,8 +40,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				    <a href="<%=basePath%>jsp/addToCart.jsp?pid=<s:property value='#request.product.id'/>"/>
 						添加到购物车
 					</a></br>
-					<s:token></s:token>
-				</form>
+				</s:form>	
 		</div>
 	</div>
     

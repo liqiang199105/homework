@@ -41,12 +41,26 @@ public class OrderDaoImp implements OrderDao {
 
 	@Override
 	public void addOrder(Order order) {
-		
+		Session session = getSession();
+		session.beginTransaction();
+		session.save(order);
+		session.getTransaction().commit();
+		sessionFactory.close();
 	}
 
 	@Override
 	public void deleteOrder(Order order) {
 		
+	}
+
+	@Override
+	public List<Order> getOrdersByCustomerId(int customerId) {
+		Session session = getSession();
+		session.beginTransaction();
+		List<Order> result = session.createQuery(" from Order where customerId=" + customerId).list();
+		session.getTransaction().commit();
+		sessionFactory.close();
+		return result;
 	}
 
 }

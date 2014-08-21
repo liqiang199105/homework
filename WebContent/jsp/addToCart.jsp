@@ -20,11 +20,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	<div id="logo">Product Show</div>
         <ul id="userOptions">
         <li id="userInfo"><a href="http://localhost/wordpress/">联系我们</a></li>
+        <s:if test="#session.username!=null">
+        	<li id="userInfo">当前用户：<s:property value="#session.username"/></li>&nbsp;&nbsp;&nbsp;&nbsp;
+        	<li id="userInfo"><a href="<%=basePath%>logout">logout</a></li>
+        </s:if>
         </ul>
 	</div>		
 	<div id="wrapper">
 		<div id="content" >
-			<s:action name="addTocart"></s:action>
 			<p>商品已成功加入购物车</p>
 			<a href="<%=basePath%>index.jsp">继续购物</a>
 			<a href="<%=basePath%>jsp/cart.jsp">去购物车结算</a>

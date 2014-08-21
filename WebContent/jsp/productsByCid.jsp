@@ -20,6 +20,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	<div id="logo">Product Show</div>
         <ul id="userOptions">
         <li id="userInfo"><a href="http://localhost/wordpress/">联系我们</a></li>
+        <s:if test="#session.username!=null">
+        	<li id="userInfo">当前用户：<s:property value="#session.username"/></li>&nbsp;&nbsp;&nbsp;&nbsp;
+        	<li id="userInfo"><a href="<%=basePath%>logout">logout</a></li>
+        </s:if>
         </ul>
 	</div>		
 	<div id="wrapper">
