@@ -33,7 +33,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<s:iterator value="#session.orders" id="order">
 				<label>price:<s:property value='#order.price'/></label>
 				<label>customerId:<s:property value='#order.customerId'/></label>
-				<label>quantity:<s:property value='#order.quantity'/></label>
+				<label>quantity:<s:property value='#order.quantity'/></label></br>
 			</s:iterator>			
 		</div>
 	</div>

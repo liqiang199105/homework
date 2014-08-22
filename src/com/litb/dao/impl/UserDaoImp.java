@@ -39,7 +39,7 @@ public class UserDaoImp implements UserDao {
 	public User getUserByUsername(String username) {
 		Session session = getSession();
 		session.beginTransaction();
-		User user = (User) session.createQuery("from User where username='" + username + " '").list().get(0);
+		User user = (User) session.createQuery("from User where username='" + username + "'").list().get(0);
 		session.getTransaction().commit();
 		sessionFactory.close();
 		return user;

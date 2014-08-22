@@ -64,9 +64,9 @@
         <!-- 购物车配置 -->
         
         <action name="addToCart" class="com.litb.action.CartAction">
-        	<result name="success">jsp/addToCart.jsp</result>
+        	<result name="success">addToCart.jsp</result>
         	<result name="input">login.jsp</result>
-        	<result name="error">fail.jsp</result>
+        	<result name="error">addToCart.jsp</result>
         </action>
          <action name="goToCart" class="com.litb.action.CartAction" method="goToCart">
         	<result name="success">jsp/cart.jsp</result>

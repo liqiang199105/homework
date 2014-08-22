@@ -2,6 +2,7 @@ package com.litb.action;
 
 import java.sql.Timestamp;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.struts2.ServletActionContext;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,21 +31,25 @@ public class CartAction extends ActionSupport {
 
 	@Override
 	public String execute() throws Exception {
+		Map session = ActionContext.getContext().getSession();
 		try {
 			String username = (String) ServletActionContext.getRequest().getSession().getAttribute("username");
 			System.out.println("qty" + qty);
-			if(username!=null){
-				customerId = userManager.getUserByUsername(username).getId();
+			System.out.println("username" + username);
+			System.out.println("pid" + pid);
+			if(username != null){
+				setCustomerId(userManager.getUserByUsername(username).getId());
+				System.out.println("pid" + getPid());
 				Product product = productService.getProductById(pid);
-				customerId = userManager.getCurrentUser().getId();
-				System.out.println("qty" + qty);
-				System.out.println("customerId" + customerId);
-				Order order = new Order(product.getPrice(),customerId,pid,qty,new Timestamp(System.currentTimeMillis()));
+//				System.out.println("qty" + qty);
+//				System.out.println("customerId" + customerId);
+				Order order = new Order(product.getPrice(),getCustomerId(),getPid(),getQty(),new Timestamp(System.currentTimeMillis()));
 				orderService.addOrder(order);
-				List<Order> orders = orderService.getOrdersByCustomerId(customerId);
+				List<Order> orders = orderService.getOrdersByCustomerId(getCustomerId());
 				ServletActionContext.getRequest().getSession().setAttribute("orders", orders);
 				return SUCCESS;
 			} else {
+				System.out.println(INPUT);
 				return INPUT;
 			}
 		} catch (Exception e) {
@@ -73,6 +78,24 @@ public class CartAction extends ActionSupport {
 
 	public void setOrders(List<Order> orders) {
 		this.orders = orders;
+	}
+	public int getQty() {
+		return qty;
+	}
+	public void setQty(int qty) {
+		this.qty = qty;
+	}
+	public int getPid() {
+		return pid;
+	}
+	public void setPid(int pid) {
+		this.pid = pid;
+	}
+	public int getCustomerId() {
+		return customerId;
+	}
+	public void setCustomerId(int customerId) {
+		this.customerId = customerId;
 	}
 
 }
