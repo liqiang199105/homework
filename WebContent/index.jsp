@@ -77,6 +77,7 @@
 	 </div>
 	 <div id="footer">
 	  <p>Powered By Larkin</p>
+	  <p><a href="http://localhost/wordpress/">联系我们</a></p>
 	 </div>
 
 </body>

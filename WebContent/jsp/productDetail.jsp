@@ -29,17 +29,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	</div>		
 	<div id="wrapper">
 		<div id="content" >
-			<s:debug></s:debug>
 				<s:form action="addToCart" method="post">
 					<s:action name="getProductDetail"></s:action>
 					<img src="<s:property value='#request.product.imgUrl'/>"></br>
-					<s:textfield name="pid" label="pid" value="%{#request.product.id}"></s:textfield>
+					<s:hidden name="pid" label="pid" value="%{#request.product.id}"></s:hidden>
 					<label>name&nbsp;:<s:property value='#request.product.name'/></label></br>
 					<label>price&nbsp;:<s:property value='#request.product.price'/></label></br>
 					<label>detail&nbsp;:<s:property value='#request.product.detail'/></label></br>
 					<s:select label="qty" name="qty" list="{1,2,3,4,5}"></s:select></br>
 				 	<s:submit name="添加到购物车"></s:submit>
-				 	<s:debug></s:debug>
 				</s:form>	
 		</div>
 	</div>

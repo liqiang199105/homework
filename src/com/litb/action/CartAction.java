@@ -1,5 +1,6 @@
 package com.litb.action;
 
+import java.math.BigDecimal;
 import java.sql.Timestamp;
 import java.util.List;
 import java.util.Map;
@@ -61,8 +62,13 @@ public class CartAction extends ActionSupport {
 		try {
 			int customerId = userManager.getCurrentUser().getId();
 			System.out.println("customerid: " + customerId);
+			BigDecimal totalPrice = BigDecimal.ZERO;
 			List<Order> orders = orderService.getOrdersByCustomerId(customerId);
+			for (Order order : orders) {
+				totalPrice = totalPrice.add(order.getPrice().multiply(new BigDecimal(order.getQuantity())));
+			}
 			ServletActionContext.getRequest().getSession().setAttribute("orders", orders);
+			ServletActionContext.getRequest().getSession().setAttribute("totalPrice", totalPrice);
 			return SUCCESS;
 		} catch (Exception e) {
 			e.printStackTrace();

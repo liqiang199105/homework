@@ -29,12 +29,17 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<div id="wrapper">
 		<div id="content" >
 			<s:action name="goToCart"></s:action>
-			<s:debug></s:debug>
-			<s:iterator value="#session.orders" id="order">
-				<label>price:<s:property value='#order.price'/></label>
-				<label>customerId:<s:property value='#order.customerId'/></label>
-				<label>quantity:<s:property value='#order.quantity'/></label></br>
-			</s:iterator>			
+			<s:if test="#session.orders!=null">
+				<s:iterator value="#session.orders" id="order">
+					<label>price:<s:property value='#order.price'/></label>
+					<label>customerId:<s:property value='#order.customerId'/></label>
+					<label>quantity:<s:property value='#order.quantity'/></label></br>
+				</s:iterator>			
+				<label>totalPrice:<s:property value='#session.totalPrice'/></label>
+				<div >
+					<a href="http://www.lightinthebox.com">付款</a>
+				</div>
+			</s:if>
 		</div>
 	</div>
     
